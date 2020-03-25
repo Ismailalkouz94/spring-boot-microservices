@@ -1,11 +1,11 @@
 # Weather guess application using microservices spring boot cloud
 
 ## Technologies
-spring boot\
-spring cloud netflix\
-restfull API\
-mysql database\
-maven
+*spring boot\
+*spring cloud netflix\
+*restfull API\
+*mysql database\
+*maven
 
 
 ## Contents
@@ -25,3 +25,5 @@ These are the instructions:
 * **postman collection**. Using postman software [POSTMAN](https://www.postman.com/).
 * **User-Managment, Weather API, service-registry and Api-gateway**. You need to start all these services using the command line. Navigate to each folder and execute for every one of them: `./mvnw spring-boot:run`. If you want to try load balancing you can execute more than one instance of the User-Managment or Weather API service. To do that, override the port number to avoid clashing: `./mvnw spring-boot:run -Drun.arguments="--server.port=A_FREE_PORT"` ex:`mvnw spring-boot:run -Drun.arguments="--server.port=8081`
 
+## Notes
+* if you want to see your registered services go to [Eureka](http://localhost:8761/) Dashboard

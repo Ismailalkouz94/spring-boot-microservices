@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "weather_app_springboot_microservices",
+		"_postman_id": "c00cc781-8daa-0221-f98e-40366e4cadf6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addUser",
+			"request": {
+				"url": "localhost:8000/api/users/addUser",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"ismail15\",\n\t\"email\":\"ismlkouz@gmail.com\",\n\t\"phone\":\"00000\",\n\t\"active\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUsers",
+			"request": {
+				"url": "localhost:8000/api/users/getUsers/ismail",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"ismail\",\n\t\"email\":\"ismailkouz@gmail.com\",\n\t\"phone\":\"00000\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getWeather",
+			"request": {
+				"url": "localhost:8000/api/weather/getWeather",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"cityName\":\"amman\",\n\t\"userName\":\"ismail\",\n\t\"guessTemp\":\"10.0\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "save result",
+			"request": {
+				"url": "localhost:8000/api/weather/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"ismail\",\n    \"cityName\": \"irbid\",\n    \"realTemp\": \"17.0\",\n    \"guessTemp\": \"16.0\",\n    \"correct\": false\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

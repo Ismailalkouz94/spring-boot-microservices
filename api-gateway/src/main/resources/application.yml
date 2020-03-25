@@ -1,0 +1,43 @@
+server:
+  port: 8000
+
+zuul:
+  ignoredServices: '*'
+  prefix: /api
+  routes:
+    addUser:
+      path: /users/addUser/**
+      serviceId: userManagemnt
+      strip-prefix: false
+    getUsers:
+      path: /users/getUsers/**
+      serviceId: userManagemnt
+      strip-prefix: false
+    save:
+      path: /result/save/**
+      serviceId: userManagemnt
+      strip-prefix: false
+    getWeather:
+      path: /weather/getWeather/**
+      serviceId: weatherApi
+      strip-prefix: false
+    saveWeather:
+      path: /weather/save/**
+      serviceId: weatherApi
+      strip-prefix: false
+
+
+endpoints:
+  routes:
+    sensitive: false
+  trace:
+    sensitive: false
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+feign:
+  hystrix:
+    enabled=false:

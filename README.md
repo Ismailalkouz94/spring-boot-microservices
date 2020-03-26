@@ -1,11 +1,11 @@
 # Weather guess application using microservices spring boot cloud
 
 ## Technologies
-*spring boot\
-*spring cloud netflix\
-*restfull API\
-*mysql database\
-*maven
+* spring boot\
+* spring cloud netflix\
+* restfull API\
+* mysql database\
+* maven
 
 
 ## Contents
@@ -14,8 +14,8 @@ The repository contains five folders, one for each component of the system:
 
 * **User-Managment** is one of the backend services. It has a REST API to get and provide results to simple Users managment.
 * **Weather API** is the second backend service. It provides a REST API to get weathers.
-* **service-registry** is the Eureka Server, which is contacted by backend services and the gateway.
-* **Api-gateway** is the Routing Service, implemented with Zuul. It connects with Eureka for service discovery, and performs load balancing with Ribbon.
+* **Service-Registry** is the Eureka Server, which is contacted by backend services and the gateway.
+* **Api-Gateway** is the Routing Service, implemented with Zuul. It connects with Eureka for service discovery, and performs load balancing with Ribbon.
 * **postman collection** contains the API samples.
 
 ## How to execute the application
